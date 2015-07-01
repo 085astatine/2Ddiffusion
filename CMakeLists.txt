@@ -32,5 +32,11 @@ include_directories(
     ${EIGEN3_INCLUDE_DIR}
     )
 target_link_libraries(2Ddiffusion
+    field_base
     ${GLUT_LIBRARY}
     ${OPENGL_LIBRARY})
+
+add_library(field_base
+    field/field_base.cpp
+    field/solver/boundary_base.cpp
+    field/solver/solver_base.cpp)
