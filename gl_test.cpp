@@ -12,7 +12,7 @@ void display(void){
 }
 
 int main(int argc, char *argv[]){
-    std::cout << "2D Diffusion" << std::endl;
+    std::cout << "GL Test" << std::endl;
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_RGBA);
     glutCreateWindow(argv[0]);

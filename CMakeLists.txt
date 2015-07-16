@@ -26,12 +26,12 @@ find_package(Eigen3 REQUIRED)
 #
 # make rule
 #
-add_executable(2Ddiffusion
-    main.cpp)
 include_directories(
     ${EIGEN3_INCLUDE_DIR}
     )
-target_link_libraries(2Ddiffusion
+add_executable(GLTest
+    gl_test.cpp)
+target_link_libraries(GLTest
     field_base
     ${GLUT_LIBRARY}
     ${OPENGL_LIBRARY})
@@ -40,3 +40,5 @@ add_library(field_base
     field/field_base.cpp
     field/solver/boundary_base.cpp
     field/solver/solver_base.cpp)
+add_executable(Diffusion
+    diffusion.cpp)
